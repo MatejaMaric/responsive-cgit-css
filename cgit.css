@@ -893,3 +893,52 @@ div#cgit table.ssdiff td.space {
 div#cgit table.ssdiff td.space div {
 	min-height: 3em;
 }
+
+@media only screen and (max-width: 800px) {
+	/* HEADER */
+	/* remove logo (save space) */
+	div#cgit table#header td.logo {
+		display: none;
+	}
+	/* wrap title text */
+	div#cgit table#header td.main {
+		white-space: normal;
+	}
+	/* td as block */
+	div#cgit table#header td {
+		display: block;
+	}
+	/* move branch switcher to left */
+	div#cgit table#header td.form {
+		text-align: left;
+	}
+	/* Don't display author (save space) */
+	div#cgit table#header td.sub.right {
+		display: none;
+	}
+
+	/* TABS */
+	/* both tabs and form are blocks */
+	div#cgit table.tabs td {
+		display: block;
+	}
+	/* every tab is block */
+	div#cgit table.tabs td a {
+		display: block;
+		text-align: right;
+	}
+	
+	/* CONTENT */
+	div#cgit div.content {
+		overflow-x: auto;
+		padding: 0.5em;
+	}
+	td.ls-mode {
+		white-space: nowrap;
+	}
+
+	/* PANEL ALIGNMENT */
+	div#cgit div.cgit-panel {
+		float: left;
+	}
+}
